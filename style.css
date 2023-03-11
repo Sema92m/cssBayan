@@ -1,0 +1,63 @@
+body {
+  width: 90vw;
+  background-color: #f6f6ed;
+  margin: 1rem auto;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .5s;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+  margin-bottom: 0;
+
+}
+.accordion-content {
+  display: none;
+}
+.accordion-item {
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  cursor: pointer;
+  border-top: 2px solid lightgrey;
+}
+
+.accordion-header {
+  height: 30px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.accordion-content{
+  max-width: 400px;
+  margin: auto;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+}
+
+.accordion-item.open .accordion-header::after {
+  content: "\FF0B";
+}
+
+.accordion-item.open .accordion-content {
+  display: block;
+}
+
+.accordion-header:focus + .accordion-content,
+.accordion-header:hover + .accordion-content {
+  display: block;
+}
+
+.accordion-header:focus {
+  outline: none;
+}
+
+.accordion-header::after {
+  content: "\FF0B";
+  transform: rotate(45deg);
+  float: right;
+}
+
+

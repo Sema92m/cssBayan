@@ -1,25 +1,36 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #f6f6ed;
+    background-color: #f2f3f5;
     margin: 3rem auto;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.5s;
+    /* transition: all 0.5s; */
     font-family: "Trebuchet MS", sans-serif;
+    font-weight: bold;
 }
 
 body:hover .accordion_plus {
-  display: block;
+    display: block;
 }
 
 .container {
-    margin: 0 3rem;
+    margin: 0 4rem;
+}
+
+p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+img {
+    width: 25rem;
+    border-radius: 50%;
 }
 
 input {
-    width: 0;
-    position: absolute;
+    display: none;
+    visibility: hidden;
     opacity: 0;
     z-index: -1;
 }
@@ -32,11 +43,12 @@ input {
     cursor: pointer;
 }
 
+/* plus.svg */
 .accordion_plus {
     display: none;
     text-align: center;
-    height: 18px;
-    width: 18px;
+    height: 1rem;
+    width: 1rem;
 }
 
 .accordion_img {
@@ -46,6 +58,7 @@ input {
     margin: 0 auto;
     padding-bottom: 1em;
     transition: all 0.5s;
+    cursor: pointer;
 }
 
 input:checked + .accordion_label .accordion_img {
@@ -56,20 +69,16 @@ input:checked + .accordion_label .accordion_img {
     transition: all 0.5s;
 }
 
-
 .accordion_label_content {
-  width: 100%;
-  min-height: 4rem;
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  
-  border-top: 2px solid lightgrey;
-  cursor: pointer;
-}
-.accordion_label_content_p {
-  margin: 0;
+    outline: none;
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 0.15rem solid lightgrey;
+    cursor: pointer;
 }
 
 input:checked ~ .accordion_label .accordion_label_content .accordion_plus {
@@ -77,32 +86,29 @@ input:checked ~ .accordion_label .accordion_label_content .accordion_plus {
     transition: all 0.5s;
 }
 
-input ~  .accordion_label .accordion_label_content .accordion_plus {
+input ~ .accordion_label .accordion_label_content .accordion_plus {
     transition: all 0.5s;
 }
 
-
-.accordion_label:active  {
-  color: blue
+.accordion_label:hover .accordion_img,
+.accordion_label:focus .accordion_img {
+    display: flex;
+    justify-content: center;
+    animation: scale 0.5s linear;
+    max-height: 100%;
+    transition: all 0.5s;
 }
 
-/* .accordion_item:hover  .accordion-content,
-.accordion_item:focus  .accordion-content {
-  display: flex;
-  justify-content: center;
-  animation: scale 0.5s linear;
-  max-height: 100%;
-  transition: all 0.5s;
+.accordion_label:hover .accordion_label_content .accordion_plus,
+.accordion_label:focus .accordion_label_content .accordion_plus {
+    transition: all 0.5s;
+    transform: rotate(45deg);
 }
-.accordion_item:hover  .accordion_wrapper .accordion-label .accordion_plus ,
-.accordion_item:focus  .accordion_wrapper .accordion-label .accordion_plus  {
-  transition: all 0.5s;
-  transform: rotate(45deg);
-}  */
-.accordion_item:active {
+.accordion_label:active {
     color: blue;
     transition: color 0.1s;
 }
+
 /* .accordion_item:hover  .accordion_svg {
   transition: all 0.5s;
   transform: rotate(45deg);
@@ -130,5 +136,102 @@ input ~  .accordion_label .accordion_label_content .accordion_plus {
     }
     100% {
         transform: scale(1);
+    }
+}
+
+/* red line */
+.blink {
+    animation: blinker 1.5s linear infinite;
+    color: red;
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* MEDIA */
+
+@media (min-width: 1200px) {
+    body {
+        background: #565656;
+    }
+    .accordion_label_content_p {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
+@media (max-width: 1200px) {
+    body {
+        background: #888888;
+    }
+    .container {
+        margin: 0 2.5rem;
+    }
+    .accordion_label_content_p {
+        font-size: 1.9rem;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 1024px) {
+    body {
+        background: #b0b0b0;
+    }
+    .accordion_label_content_p {
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    img {
+        width: 20rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background: #c5c5c5;
+    }
+    .container {
+        margin: 0 2rem;
+    }
+    .accordion_label_content_p {
+        font-size: 1.6rem;
+        font-weight: bold;
+    }
+    .accordion_plus {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+    img {
+        width: 18rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background: #dddddd;
+    }
+    .container {
+        margin: 0 1.5rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    .accordion_label_content_p {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .accordion_plus {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+    }
+    img {
+        width: 12rem;
     }
 }

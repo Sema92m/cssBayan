@@ -9,9 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./style.css">
   <title>Document</title>
 </head>
@@ -20,41 +17,65 @@
 
   <div class="container">
     <h1>CSS Bayan</h1>
+
     <form class="accordion">
-        <input type="radio"  id="tab1" name="1">
+      <div class="section">
+        <input type="radio" checked id="tab1" name="accordion">
         <label class="accordion_label" for="tab1">
           <div class="accordion_label_content">
-            <p class="accordion_label_content_p">You can't copy and paste CSS</p>
+            <p class="accordion_label_content_p">Bikini girls</p>
             <i class="fa-solid fa-plus accordion_plus"></i>
           </div>
-          <div class="accordion_img"><img src="https://picsum.photos/300/300" alt="Mem"></div>
+          <div class="accordion_img"><img src="https://source.unsplash.com/400x400/?bikini" alt="Mem"></div>
         </label>
+      </div>
 
-        <input type="radio" id="tab2" name="1">
+      <div class="section">
+        <input type="radio" id="tab2" name="accordion">
         <label class="accordion_label" for="tab2">
           <div class="accordion_label_content">
-            <p class="accordion_label_content_p">You can't copy and paste CSS</p>
+            <p class="accordion_label_content_p">Beautiful girls</p>
             <i class="fa-solid fa-plus accordion_plus"></i>
           </div>
-          <div class="accordion_img"><img src="https://picsum.photos/300/300" alt="Mem"></div>
+          <div class="accordion_img"><img src="https://source.unsplash.com/400x400/?woman-body" alt="Mem"></div>
         </label>
-        <input type="radio" id="tab3" name="1">
+      </div>
+
+      <div class="section">
+        <input type="radio" id="tab4" name="accordion">
+        <label class="accordion_label" for="tab4">
+          <div class="accordion_label_content">
+            <p class="accordion_label_content_p">This one for girls</p>
+            <i class="fa-solid fa-plus accordion_plus"></i>
+          </div>
+          <div class="accordion_img"><img src="https://source.unsplash.com/400x400/?gym" alt="Mem"></div>
+        </label>
+      </div>
+
+      <div class="section">
+        <input type="radio" id="tab3" name="accordion">
         <label class="accordion_label" for="tab3">
           <div class="accordion_label_content">
-            <p class="accordion_label_content_p">You can't copy and paste CSS</p>
+            <p class="accordion_label_content_p">Dogs here!</p>
             <i class="fa-solid fa-plus accordion_plus"></i>
           </div>
-          <div class="accordion_img"><img src="https://picsum.photos/300/300" alt="Mem"></div>
+          <div class="accordion_img"><img src="https://source.unsplash.com/400x400/?dog" alt="Mem"></div>
         </label>
+      </div>
 
-      <!-- <div class="accordion_header">Keep calm and carry on</div>
+      <div class="section">
+        <input type="radio" id="tab5" name="accordion">
+        <label class="accordion_label" for="tab5">
+          <div class="accordion_label_content">
+            <p class="accordion_label_content_p">Cats here!</p>
+            <i class="fa-solid fa-plus accordion_plus"></i>
+          </div>
+          <div class="accordion_img"><img src="https://source.unsplash.com/400x400/?cat" alt="Mem"></div>
+        </label>
+      </div>
 
-      <div class="accordion_header">Work-life balance</div>
-
-      <div class="accordion_header">Dude, where is JS</div>
-
-      <div class="accordion_header">Relax and take it easy</div> -->
-
+      <marquee scrollamount="20" class="blink">Reload for new pics!</marquee>
+      </marquee>
     </form>
   </div>
 </body>

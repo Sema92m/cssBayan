@@ -5,7 +5,6 @@ body {
     margin: 3rem auto;
     padding: 0;
     box-sizing: border-box;
-    /* transition: all 0.5s; */
     font-family: "Trebuchet MS", sans-serif;
     font-weight: bold;
 }
@@ -15,17 +14,13 @@ body:hover .accordion_plus {
 }
 
 .container {
+    max-width: 70rem;
     margin: 0 4rem;
 }
 
 p {
     margin: 0;
     font-size: 2rem;
-}
-
-img {
-    width: 25rem;
-    border-radius: 50%;
 }
 
 input {
@@ -59,6 +54,11 @@ input {
     padding-bottom: 1em;
     transition: all 0.5s;
     cursor: pointer;
+}
+
+img {
+    width: 25rem;
+    border-radius: 50%;
 }
 
 input:checked + .accordion_label .accordion_img {
@@ -108,21 +108,22 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
     color: blue;
     transition: color 0.1s;
 }
-.accordion_label:visited {
-   background-color: red;
+.accordion_label:checked {
+    color: blue;
+    transition: color 0.1s;
 }
 
 /* img scale animation */
 @keyframes scale {
     0% {
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
     100% {
         transform: scale(1);
     }
 }
 
-/* red line */
+/* red line 'Reload for new pics!'*/
 .blink {
     animation: blink 1.5s linear infinite;
     color: red;
@@ -139,11 +140,15 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
     body {
         background: #565656;
     }
+    .container {
+        margin: 0 auto;
+    }
     .accordion_label_content_p {
-        font-size: 2rem;
+        font-size: 2.2rem;
         font-weight: bold;
     }
 }
+
 @media (max-width: 1200px) {
     body {
         background: #888888;
@@ -182,8 +187,8 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
         font-weight: bold;
     }
     .accordion_plus {
-      visibility: hidden;
-      width: 0;
+        visibility: hidden;
+        width: 0;
     }
     img {
         width: 18rem;

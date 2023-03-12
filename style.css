@@ -108,28 +108,11 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
     color: blue;
     transition: color 0.1s;
 }
+.accordion_label:visited {
+   background-color: red;
+}
 
-/* .accordion_item:hover  .accordion_svg {
-  transition: all 0.5s;
-  transform: rotate(45deg);
-} */
-
-/* .accordion_item:focus .accordion_content,
-.accordion_item:hover .accordion_content {
-    transition: all 1s ease-out;
-    display: block;
-    animation: scale 0.5s linear;
-    animation-iteration-count: 1;
-} */
-
-/* 
-.accordion_item:focus .accordion_svg,
-.accordion_item:hover .accordion_svg {
-    transform: rotate(45deg);
-    transition: all 0.5s ease-out;
-    cursor: cell;
-} */
-
+/* img scale animation */
 @keyframes scale {
     0% {
         transform: scale(0.9);
@@ -141,19 +124,17 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
 
 /* red line */
 .blink {
-    animation: blinker 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
     color: red;
     font-size: 2rem;
-    margin-top: 3rem;
 }
-@keyframes blinker {
+@keyframes blink {
     50% {
         opacity: 0;
     }
 }
 
 /* MEDIA */
-
 @media (min-width: 1200px) {
     body {
         background: #565656;
@@ -201,10 +182,8 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
         font-weight: bold;
     }
     .accordion_plus {
-        display: none;
-        visibility: hidden;
-        opacity: 0;
-        z-index: -1;
+      visibility: hidden;
+      width: 0;
     }
     img {
         width: 18rem;
@@ -226,10 +205,8 @@ input ~ .accordion_label .accordion_label_content .accordion_plus {
         font-weight: bold;
     }
     .accordion_plus {
-        display: none;
         visibility: hidden;
-        opacity: 0;
-        z-index: -1;
+        width: 0;
     }
     img {
         width: 12rem;

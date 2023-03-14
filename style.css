@@ -27,7 +27,7 @@ input {
     visibility: hidden;
 }
 .section {
-  outline: none;
+    outline: none;
 }
 .accordion:hover {
     color: black;
